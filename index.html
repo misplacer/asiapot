@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asiapot</title>
+    <link rel="icon" type="image/png" href="media/favicon.png">
+    <link rel="stylesheet" href="media/style.css">
+    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <nav class="desktop_navbar">
+      <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
+      <a href="#discord" class="desktop_navbar_link scroll">Community</a>
+      <a href="#about" class="desktop_navbar_link scroll">About Us</a>
+      <div class="desktop_navbar_link2_div">
+        <a href="#join" class="desktop_navbar_link2 scroll">Asiapot</a>
+      </div>
+    </nav>
+    <div class="mobile_navbar">
+      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
+      <div id="mobile_navbar_links">
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">About Us</a>
+        </div>
+        <div class="icon" onclick="mobile_navbar_link_hider()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <script>
+            function mobile_navbar_link_hider() {
+            var x = document.getElementById("mobile_navbar_links");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+            } 
+        </script>
+    </div>
+    <div class="mainflex">
+      <div class="main1">
+        <a class="main1_logo_a" href="#">
+          <img class="main1_logo" src="media/logo.png" alt="logo">
+        </a>
+        <div class="main1_description">
+          <a>Asiapot,<br>The</a>
+          <a class="main1_actcent">One and only Asian Nodebuff Server</a><a>.</a>
+        </div>
+        <div class="main1_ipcopier_div">
+          <button class="main1_ipcopier" onclick="copyText()" type="button">
+            <span class="main1_ipcopier_text1">Server IP</span>
+            <br>
+          </button>
+          <script>
+            function copyText() {
+                navigator.clipboard.writeText
+            ("asiapot.club");
+                }
+            $(document).ready(function() {
+            $('.main1_ipcopier').click(function() {
+                var popup = $('<div>', { class: 'main1_popup' })
+                .append($('<h3 class="copy_confirm">').text('Copied IP to clipboard'))
+                $(this).after(popup);
+                setTimeout(function() {
+                popup.remove();
+                }, 1000);
+            });
+            });
+        </script>
+        </div>
+        <a href="#more" class="scroll">
+          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
+        </a>
+        <script>
+          const scrollLinks = document.querySelectorAll('.scroll');
+          scrollLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              event.preventDefault();
+              const target = document.querySelector(link.getAttribute('href'));
+              const offsetTop = target.offsetTop;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            });
+          });
+        </script>
+      </div>
+      <div id="more"></div>
+      <div class="main2">
+        <a class="headline">What we have</a>
+        <div class="main2_features_div">
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
+            <a class="main2_feature_headline">FFA</a>
+            <a class="main2_feature_text">Free For All</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
+            <a class="main2_feature_headline">Duels</a>
+            <a class="main2_feature_text">1v1 Dueling</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
+            <a class="main2_feature_headline">HCTeams</a>
+            <a class="main2_feature_text">Hardcore Teams Gamemode</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
+            <a class="main2_feature_headline">Multi-version Support</a>
+            <a class="main2_feature_text">We support multi-version</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
+            <a class="main2_feature_headline">Party Menu</a>
+            <a class="main2_feature_text">Allow players to create party</a>
+          </div>
+        </div>
+      </div>
+      <div id="discord"></div>
+      <div class="main4">
+        <a class="headline">Discord</a>
+        <div class="main4_dc_div">
+          <iframe class="main4_dc_widget" src="https://discord.com/widget?id=1170409684180676791&theme=dark" width="350" height="500" title="discord" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          <div class="main4_dc_description_div">
+            <a class="main4_dc_description_title">Community</a>
+            <a class="main4_dc_description"> ・Meet other players <br> ・Ask questions <br> ・Get notified about updates <br> ・Give feedback  <br><br> &amp; more </a>
+            <a href="http://discord.asiapot.club" class="main4_dc_button_a">
+              <div class="main4_dc_button">Join</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="about"></div>
+      <div class="main5">
+        <a class="headline">Meet our Teams</a>
+        <div class="main5_admin_div">
+          <div class="main5_admins_div main5_admins_dev_type">
+            <img class="main5_admins_img" alt="admin member img" src="https://images-ext-1.discordapp.net/external/Gxpq_N4iQPE7WDCZ2qJFZT_fLF5FSwkvTeQI6i6alOY/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/718806021438439486/d9d66a42ca2e6b9f09bc05d2c2ecaacf.png?format=webp&quality=lossless">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Founder]</a>
+              <a class="main5_admins_description_title" href="https://discordapp.com/users/misplace.exe">Zar</a>
+              <a class="main5_admins_description"><br>Founder @ Asiapot</a>
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type2">
+            <img class="main5_admins_img" alt="admin member img" src="https://images-ext-1.discordapp.net/external/0BNiV1wMmHW64_BUyjQN7Z1qu7jnv4MNmHYtXDbtWjM/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/815512745503096873/39eca65e68d7fb59b2be7fdc3e9da67b.png?format=webp&quality=lossless">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Founder]</a>
+              <a class="main5_admins_description_title" href="https://discordapp.com/users/sassytits">ThiccPigMC</a>
+              <a class="main5_admins_description"><br>Founder @ Asiapot</a>
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type1">
+            <img class="main5_admins_img" alt="admin member img" src="https://images-ext-1.discordapp.net/external/-pqgHKvrncJmI5kT4a1KXxUFlmjjQNEhBWASd5RvOi4/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1036932647013855284/041cf1e04e9d3c80f2d9dcefceb1e570.png?format=webp&quality=lossless">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Owner]</a>
+              <a class="main5_admins_description_title" href="https://discordapp.com/users/notedtundra8471">NotedTundra8471</a>
+              <a class="main5_admins_description"><br>Owner @ Asiapot</a>
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type2">
+            <img class="main5_admins_img" alt="admin member img" src="https://images-ext-1.discordapp.net/external/AtU0razgE4fIgJWEzbu0ltKhjQQRr5dxb0UfG-sYVqo/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/518455323842052129/d8aa194e5593614095c93e98e18284c2.png?format=webp&quality=lossless">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Admin]</a>
+              <a class="main5_admins_description_title" href="https://discordapp.com/users/kqr_k">zK1nqs</a>
+              <a class="main5_admins_description"><br>Admin @ Asiapot</a>
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type1">
+            <img class="main5_admins_img" alt="admin member img" src="https://images-ext-1.discordapp.net/external/JWXIWspCw2WpS2IbgxZ8Ud0K0I_LR6iQwq1I-fSxmnE/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/794410978023702538/a_ec03d7986ffa438f070b12716ec50805.gif?width=300&height=300">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Admin]</a>
+              <a class="main5_admins_description_title" href="https://discordapp.com/users/raisinforabrain">RaisinForABrain</a>
+              <a class="main5_admins_description"><br>Admin @ Asiapot</a>
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type2">
+            <img class="main5_admins_img" alt="admin member img" src="https://images-ext-1.discordapp.net/external/Xplpeh3BgcHUeBPu-MvDs96KVamFTSQ1laQjVt1ztBM/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/248013650697125890/25e09d6f5baa999883efe88988b43cd6.png?format=webp&quality=lossless">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Admin]</a>
+              <a class="main5_admins_description_title" href="https://discordapp.com/users/nobodyahahahahhahaaa">vunahh</a>
+              <a class="main5_admins_description"><br>Admin @ Asiapot</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="https://images-ext-1.discordapp.net/external/r5i5u6WRF9QQCdB_6ybVcz0YaRYAeQYLGe3SDf355MQ/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/1127262519073972255/0651658550abc64c66f4d460fb27ef34.png?format=webp&quality=lossless">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Developer]</a>
+              <a class="main5_supporters_description_title">Zap</a>
+              <a class="main5_supporters_description"><br>Developer @ Asiapot</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="https://images-ext-1.discordapp.net/external/v8z3x1QQHiItSKz8YlUrrEd-qe1gVx9UZTTl_iw6ReQ/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/216199376077455360/a809acb2fc2f450ff49108dfd548fd05.png?format=webp&quality=lossless">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Developer]</a>
+              <a class="main5_supporters_description_title">Martin</a>
+              <a class="main5_supporters_description"><br>Developer @ Asiapot</a>
+              </div>
+            </div>
+          </div>
+         </div>
+        </div>
+        <div id="join"></div>
+        <div class="main3">
+          <a class="headline">Join now</a>
+          <div class="main3_join_div_div">
+            <div class="main3_join_div">
+              <div class="main3_join_content_div">
+                <div class="main3_join_categories">
+                  <a>IP:</a>
+                  <a>Port:</a>
+                </div>
+                <div class="main3_join_values">
+                  <a>asiapot.club</a>
+                  <a>19132</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    <footer class="copyright_div">
+      <a href="https://asiapot.club" class="copyright">Asiapot @ Team</a>
+    </footer>
+  </body>
+</html>
