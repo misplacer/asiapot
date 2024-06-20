@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asiapot</title>
-    <link rel="icon" type="image/png" href="media/favicon.png">
+    <link rel="icon" type="image/png" href="media/logo_small.png">
     <link rel="stylesheet" href="media/style.css">
     <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,11 +49,27 @@
           <a>Asiapot,<br>The</a>
           <a class="main1_actcent">One and only Asian Nodebuff Server</a><a>.</a>
         </div>
-        <a href="minecraft://?addExternalServer=§l§cAsia§fPot|asiapot.club:19132" class="main1_ipcopier_div" style="text-decoration:none;">
-          <button class="main1_ipcopier">
-          <span class="main1_ipcopier_text1" style="color: white;">Join now</span>
+        <div class="main1_ipcopier_div">
+          <button class="main1_ipcopier" onclick="copyText()" type="button">
+            <span class="main1_ipcopier_text1">Server IP</span>
             <br>
-          </a>
+          </button>
+          <script>
+            function copyText() {
+                navigator.clipboard.writeText
+            ("asiapot.club");
+                }
+            $(document).ready(function() {
+            $('.main1_ipcopier').click(function() {
+                var popup = $('<div>', { class: 'main1_popup' })
+                .append($('<h3 class="copy_confirm">').text('Copied IP to clipboard'))
+                $(this).after(popup);
+                setTimeout(function() {
+                popup.remove();
+                }, 1000);
+            });
+            });
+        </script>
         </div>
         <a href="#more" class="scroll">
           <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
@@ -183,14 +199,6 @@
             <div class="main5_supporters_description_div">
               <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Developer]</a>
               <a class="main5_supporters_description_title">Martin</a>
-              <a class="main5_supporters_description"><br>Developer @ Asiapot</a>
-                          </div>
-          </div>
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="https://images-ext-1.discordapp.net/external/xoWdNBbINGdAEAydWBzaByaVZN70pcERzKAE8yz47lw/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/971080037942063114/067b1f066a12ae592384afc67803dfdf.png?format=webp&quality=lossless">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Developer]</a>
-              <a class="main5_supporters_description_title">Revape</a>
               <a class="main5_supporters_description"><br>Developer @ Asiapot</a>
               </div>
             </div>
